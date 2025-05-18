@@ -1,0 +1,9 @@
+<div class="container">
+  <hi> Authors </hi>
+  <ul class="index-authors">
+    <% @authors.each do |author| %>
+      <li><%= link_to author.name, author_path(author), class: 'text-decoration-none text-primary' %></li>
+    <% end %>
+  </ul>
+  <%= link_to "New", new_author_path, class: 'btn btn-primary mx-3' %>
+</div>
